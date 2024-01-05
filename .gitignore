@@ -15,3 +15,7 @@
 #g++ files
 *.out
 *.exe
+
+
+#exclude these
+!template.tex

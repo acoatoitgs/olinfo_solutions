@@ -1,0 +1,105 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{accsupp}
+
+%--------------------Setup--------------------
+
+\definecolor{commentcolor}{RGB}{119,118,123}
+\definecolor{keywordscolor}{RGB}{152,102,255}
+\definecolor{stringcolor}{RGB}{0,153,51}
+\definecolor{backcolor}{rgb}{0.92,0.92,1}
+
+\definecolor{lightlightblue}{rgb}{0.92,0.92,1}
+\definecolor{lightblue}{rgb}{0.7,0.7,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolor},   
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{keywordscolor},
+    stringstyle=\color{stringcolor},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    columns=fullflexible
+}
+\lstset{style=mystyle}
+\pagestyle{fancy}
+\lhead{Andrea Coato}
+\rhead{Last edited on \today}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
+%######################################################
+%######################################################
+%--------------------Actual document-------------------
+%######################################################
+%######################################################
+
+
+\begin{document}
+\section*{Innumerevoli progetti ($progetti$)}
+Chi troppo molto nulla niente.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis nunc magna, at vestibulum nibh consectetur at. Etiam pulvinar pellentesque libero, vitae aliquam massa ultricies sit amet. Sed diam justo, malesuada viverra pulvinar sed, mattis a odio. Aliquam nisi leo, sodales vel diam vitae, semper rhoncus purus. Nullam at est at augue elementum gravida. Pellentesque feugiat, turpis eget gravida bibendum, justo ante auctor enim, vel malesuada felis mi quis dolor. Nulla imperdiet lacus ex, ac rutrum nulla porttitor ut. Aenean sit amet urna nulla. Proin elit felis, efficitur non magna ut, lobortis ullamcorper sem. 
+
+
+\begin{tcolorbox}[colback=lightlightblue,colframe=lightblue, title=Soluzione in $\mathcal{O}(N^4)$, coltitle=black ]
+    Questa soluzione... funziona.
+\end{tcolorbox}
+
+\begin{lstlisting}[language=c++]
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+int n;
+int main() {
+
+  	freopen("output.txt", "w", stdout);
+
+    std::ifstream file;
+
+    file.open("input.txt");
+
+    file >> n;
+    std::string str;
+    std::vector<int16_t> v(n);
+    
+
+    for(int i = 0;std::getline(file, str, ' '); i++ )
+    {
+        v[i] = std::stoi(str);
+    }
+    
+
+    int t = v[0];
+    for(int i = 1; i < n; i++)
+    {
+    	
+    	if(v[i] > t){
+    		t=v[i];
+		}
+	}
+
+    std::cout << t;
+    return 0;
+}
+\end{lstlisting}
+
+\end{document}
