@@ -1,0 +1,9 @@
+#LaTeX files
+*.aux
+*.log
+*.gz
+
+#Olinfo files
+*.txt
+*.zip
+*.
