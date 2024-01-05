@@ -2,6 +2,7 @@
 *.aux
 *.log
 *.gz
+*.tex
 
 #Olinfo files
 *.txt
