@@ -6,4 +6,11 @@
 #Olinfo files
 *.txt
 *.zip
-*.
+*.java
+*.py
+*.c
+*.pas
+
+#g++ files
+*.out
+*.exe
