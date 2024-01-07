@@ -17,5 +17,6 @@
 *.exe
 
 
-#exclude these
+#others
 !template.tex
+example.pdf
