@@ -1,7 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
+
 int n;
 int main() {
 
@@ -13,7 +12,7 @@ int main() {
 
     file >> n;
     std::string str;
-    std::vector<int16_t> v(n);
+    std::vector<int> v(n);
     
 
     for(int i = 0;std::getline(file, str, ' '); i++ )
@@ -22,14 +21,7 @@ int main() {
     }
     
 
-    int t = v[0];
-    for(int i = 1; i < n; i++)
-    {
-    	
-    	if(v[i] > t){
-    		t=v[i];
-		}
-	}
+    int t = *max_element(v.begin(), v.end());
 
     std::cout << t;
     return 0;
