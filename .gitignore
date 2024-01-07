@@ -4,6 +4,7 @@
 *.gz
 *.tex
 
+
 #Olinfo files
 *.txt
 *.zip
@@ -18,5 +19,5 @@
 
 
 #others
+Example/
 !template.tex
-example.pdf
